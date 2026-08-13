@@ -1,0 +1,8 @@
+{
+  "name": "Editor IA — Artok Viral Studio",
+  "description": "Rol Editor del contrato v1/Director de Artok Viral Studio. Ejecuta las ops assemble, render y qa para ensamblar los clips IA del Producer en videos MP4 finales de ~2 min, respondiendo al Director con REPORT/QUESTION/ERROR/DECISION.",
+  "version": "1.0.0",
+  "createdAt": "2026-08-10T23:51:06.264Z",
+  "sourceAppId": "936ca313-10cc-40fb-b7c9-9c104f0e9439",
+  "appKind": "agent"
+}

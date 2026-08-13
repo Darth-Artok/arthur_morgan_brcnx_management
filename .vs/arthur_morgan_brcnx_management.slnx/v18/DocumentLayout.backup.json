@@ -1,0 +1,375 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Personal\\.copilot\\plans\\plan-integracin-segura-de-credenciales-de-tiktok-y-conectores-para-facebookinstagram.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\COMPLETE_CHANGELOG.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:COMPLETE_CHANGELOG.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\INDEX.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:INDEX.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\IMPLEMENTATION_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:IMPLEMENTATION_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Personal\\.codex\\.chatgpt-projects\\g-p-6a6d6abe62f08191985e1d050f9864fa\\arthur_morgan_brcnx_management\\main.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\main.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\.env.example||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:.env.example||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\CREDENTIALS_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:CREDENTIALS_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\test_integration.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:test_integration.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\ARCHITECTURE_DIAGRAM.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:ARCHITECTURE_DIAGRAM.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\QUICK_START.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:QUICK_START.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\COMPLETION_REPORT.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:COMPLETION_REPORT.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\FINAL_SUMMARY.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:FINAL_SUMMARY.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_SETUP_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:TIKTOK_SETUP_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_QUICK_SETUP.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:TIKTOK_QUICK_SETUP.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\DELIVERY_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:DELIVERY_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_START_HERE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:TIKTOK_START_HERE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_INFORMATION_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:TIKTOK_INFORMATION_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_OAUTH_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:TIKTOK_OAUTH_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\OAUTH_IMPLEMENTATION_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:OAUTH_IMPLEMENTATION_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\SESSION_COMPLETION_REPORT.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{7182C372-5DF6-4E64-AE25-5FD713999AB7}|arthur_morgan_brcnx_management.vcxproj|solutionrelative:SESSION_COMPLETION_REPORT.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "plan-integracin-segura-de-credenciales-de-tiktok-y-conectores-para-facebookinstagram.md [Versi\u00F3n preliminar]",
+              "DocumentMoniker": "C:\\Users\\Personal\\.copilot\\plans\\plan-integracin-segura-de-credenciales-de-tiktok-y-conectores-para-facebookinstagram.md",
+              "RelativeDocumentMoniker": "..\\..\\..\\.copilot\\plans\\plan-integracin-segura-de-credenciales-de-tiktok-y-conectores-para-facebookinstagram.md",
+              "ToolTip": "C:\\Users\\Personal\\.copilot\\plans\\plan-integracin-segura-de-credenciales-de-tiktok-y-conectores-para-facebookinstagram.md [Versi\u00F3n preliminar]",
+              "RelativeToolTip": "..\\..\\..\\.copilot\\plans\\plan-integracin-segura-de-credenciales-de-tiktok-y-conectores-para-facebookinstagram.md [Versi\u00F3n preliminar]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T17:19:22.984Z",
+              "EditorCaption": " [Versi\u00F3n preliminar]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "COMPLETE_CHANGELOG.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\COMPLETE_CHANGELOG.md",
+              "RelativeDocumentMoniker": "COMPLETE_CHANGELOG.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\COMPLETE_CHANGELOG.md",
+              "RelativeToolTip": "COMPLETE_CHANGELOG.md",
+              "ViewState": "AgIAALcCAAAAAAAAAAAAAAsDAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T18:22:01.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SESSION_COMPLETION_REPORT.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\SESSION_COMPLETION_REPORT.md",
+              "RelativeDocumentMoniker": "SESSION_COMPLETION_REPORT.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\SESSION_COMPLETION_REPORT.md",
+              "RelativeToolTip": "SESSION_COMPLETION_REPORT.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T18:48:57.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "INDEX.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\INDEX.md",
+              "RelativeDocumentMoniker": "INDEX.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\INDEX.md",
+              "RelativeToolTip": "INDEX.md",
+              "ViewState": "AgIAAF8BAAAAAAAAAAAAAGwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T17:47:15.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "OAUTH_IMPLEMENTATION_GUIDE.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\OAUTH_IMPLEMENTATION_GUIDE.md",
+              "RelativeDocumentMoniker": "OAUTH_IMPLEMENTATION_GUIDE.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\OAUTH_IMPLEMENTATION_GUIDE.md",
+              "RelativeToolTip": "OAUTH_IMPLEMENTATION_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T18:11:52.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TIKTOK_OAUTH_COMPLETE.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_OAUTH_COMPLETE.md",
+              "RelativeDocumentMoniker": "TIKTOK_OAUTH_COMPLETE.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_OAUTH_COMPLETE.md",
+              "RelativeToolTip": "TIKTOK_OAUTH_COMPLETE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABADAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T18:11:16.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TIKTOK_INFORMATION_SUMMARY.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_INFORMATION_SUMMARY.md",
+              "RelativeDocumentMoniker": "TIKTOK_INFORMATION_SUMMARY.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_INFORMATION_SUMMARY.md",
+              "RelativeToolTip": "TIKTOK_INFORMATION_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T18:08:28.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TIKTOK_START_HERE.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_START_HERE.md",
+              "RelativeDocumentMoniker": "TIKTOK_START_HERE.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_START_HERE.md",
+              "RelativeToolTip": "TIKTOK_START_HERE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T18:07:55.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DELIVERY_SUMMARY.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\DELIVERY_SUMMARY.md",
+              "RelativeDocumentMoniker": "DELIVERY_SUMMARY.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\DELIVERY_SUMMARY.md",
+              "RelativeToolTip": "DELIVERY_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T18:04:43.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TIKTOK_QUICK_SETUP.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_QUICK_SETUP.md",
+              "RelativeDocumentMoniker": "TIKTOK_QUICK_SETUP.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_QUICK_SETUP.md",
+              "RelativeToolTip": "TIKTOK_QUICK_SETUP.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T18:04:05.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TIKTOK_SETUP_GUIDE.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_SETUP_GUIDE.md",
+              "RelativeDocumentMoniker": "TIKTOK_SETUP_GUIDE.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\TIKTOK_SETUP_GUIDE.md",
+              "RelativeToolTip": "TIKTOK_SETUP_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIUCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T18:03:37.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FINAL_SUMMARY.txt",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\FINAL_SUMMARY.txt",
+              "RelativeDocumentMoniker": "FINAL_SUMMARY.txt",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\FINAL_SUMMARY.txt",
+              "RelativeToolTip": "FINAL_SUMMARY.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-08-11T17:51:14.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "COMPLETION_REPORT.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\COMPLETION_REPORT.md",
+              "RelativeDocumentMoniker": "COMPLETION_REPORT.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\COMPLETION_REPORT.md",
+              "RelativeToolTip": "COMPLETION_REPORT.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T17:49:15.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IMPLEMENTATION_SUMMARY.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\IMPLEMENTATION_SUMMARY.md",
+              "RelativeDocumentMoniker": "IMPLEMENTATION_SUMMARY.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\IMPLEMENTATION_SUMMARY.md",
+              "RelativeToolTip": "IMPLEMENTATION_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T17:45:07.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "QUICK_START.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\QUICK_START.md",
+              "RelativeDocumentMoniker": "QUICK_START.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\QUICK_START.md",
+              "RelativeToolTip": "QUICK_START.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T17:47:50.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ARCHITECTURE_DIAGRAM.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\ARCHITECTURE_DIAGRAM.md",
+              "RelativeDocumentMoniker": "ARCHITECTURE_DIAGRAM.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\ARCHITECTURE_DIAGRAM.md",
+              "RelativeToolTip": "ARCHITECTURE_DIAGRAM.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T17:46:24.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "test_integration.py",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\test_integration.py",
+              "RelativeDocumentMoniker": "test_integration.py",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\test_integration.py",
+              "RelativeToolTip": "test_integration.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHfSURBVDhPpZCxaxNhGMZ/9zVJaUuDUlq1FBWLZBFTCXo4BFyU1qGKi4OkIHhkzF/g0KF00M2lR9YUdDDQQVAcJILoQUd1UNRmkhoRm8RL777v7nOoCZd4AcEH3uF5nvd73vd74X\u002BgtTai3LIsHeWDEEJct217a1DvwbIs7bpubFUqFW3b9naxWLwWfSOipAvHcfqqi0KhkMtms3cty1rsaomeG4FpmoMSANVqlXQ6nQMWgacMC4hOBchduEj\u002ByjKjScGh8SS1Wq3nxQZEN3j1eY/Vrfe8rTeQvsf89ARLS1cz5XIZ/uUGXxptQiVRUhJIybudXaZn52a7vbEBpmkyNb/A69YM9W8tDEJOTI2hpI\u002BSkvOZH2f13sNAB\u002B07sV9wHIdH9Unquz9RvoeUPtL3UFISKkky\u002BAT7HwTi6FpsgGma3N9\u002Bg5I\u002BKaFZyU8wOpJChwHnjiuE9wKCXyC/zsQGOI7DeELjtiUPbgky6Wd/HA3KBelC4AIpNfQGl88cQ0mfI5PugRhKkM2DUk0INYwtPI/dAGAlf4rbl06T6DyBVgeCABJzYPhwcm0V8ICNvwJKpVIf37h3IxSyKVAuBMDIYQAMw1jvaxwGrYNl3Xq5o79vat3Y3Nedj4\u002B11je7/m\u002BXOuyzFtDhUgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-08-11T17:45:26.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": ".env",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\.env",
+              "RelativeDocumentMoniker": ".env",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\.env",
+              "RelativeToolTip": ".env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-08-11T17:16:41.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": ".env.example",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\.env.example",
+              "RelativeDocumentMoniker": ".env.example",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\.env.example",
+              "RelativeToolTip": ".env.example",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-08-11T17:16:36.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "main.py",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\main.py",
+              "RelativeDocumentMoniker": "main.py",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\main.py",
+              "RelativeToolTip": "main.py",
+              "ViewState": "AgIAABwAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHfSURBVDhPpZCxaxNhGMZ/9zVJaUuDUlq1FBWLZBFTCXo4BFyU1qGKi4OkIHhkzF/g0KF00M2lR9YUdDDQQVAcJILoQUd1UNRmkhoRm8RL777v7nOoCZd4AcEH3uF5nvd73vd74X\u002BgtTai3LIsHeWDEEJct217a1DvwbIs7bpubFUqFW3b9naxWLwWfSOipAvHcfqqi0KhkMtms3cty1rsaomeG4FpmoMSANVqlXQ6nQMWgacMC4hOBchduEj\u002ByjKjScGh8SS1Wq3nxQZEN3j1eY/Vrfe8rTeQvsf89ARLS1cz5XIZ/uUGXxptQiVRUhJIybudXaZn52a7vbEBpmkyNb/A69YM9W8tDEJOTI2hpI\u002BSkvOZH2f13sNAB\u002B07sV9wHIdH9Unquz9RvoeUPtL3UFISKkky\u002BAT7HwTi6FpsgGma3N9\u002Bg5I\u002BKaFZyU8wOpJChwHnjiuE9wKCXyC/zsQGOI7DeELjtiUPbgky6Wd/HA3KBelC4AIpNfQGl88cQ0mfI5PugRhKkM2DUk0INYwtPI/dAGAlf4rbl06T6DyBVgeCABJzYPhwcm0V8ICNvwJKpVIf37h3IxSyKVAuBMDIYQAMw1jvaxwGrYNl3Xq5o79vat3Y3Nedj4\u002B11je7/m\u002BXOuyzFtDhUgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-08-11T17:04:39.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "main.py",
+              "DocumentMoniker": "C:\\Users\\Personal\\.codex\\.chatgpt-projects\\g-p-6a6d6abe62f08191985e1d050f9864fa\\arthur_morgan_brcnx_management\\main.py",
+              "RelativeDocumentMoniker": "..\\..\\..\\.codex\\.chatgpt-projects\\g-p-6a6d6abe62f08191985e1d050f9864fa\\arthur_morgan_brcnx_management\\main.py",
+              "ToolTip": "C:\\Users\\Personal\\.codex\\.chatgpt-projects\\g-p-6a6d6abe62f08191985e1d050f9864fa\\arthur_morgan_brcnx_management\\main.py",
+              "RelativeToolTip": "..\\..\\..\\.codex\\.chatgpt-projects\\g-p-6a6d6abe62f08191985e1d050f9864fa\\arthur_morgan_brcnx_management\\main.py",
+              "ViewState": "AgIAAK0BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHfSURBVDhPpZCxaxNhGMZ/9zVJaUuDUlq1FBWLZBFTCXo4BFyU1qGKi4OkIHhkzF/g0KF00M2lR9YUdDDQQVAcJILoQUd1UNRmkhoRm8RL777v7nOoCZd4AcEH3uF5nvd73vd74X\u002BgtTai3LIsHeWDEEJct217a1DvwbIs7bpubFUqFW3b9naxWLwWfSOipAvHcfqqi0KhkMtms3cty1rsaomeG4FpmoMSANVqlXQ6nQMWgacMC4hOBchduEj\u002ByjKjScGh8SS1Wq3nxQZEN3j1eY/Vrfe8rTeQvsf89ARLS1cz5XIZ/uUGXxptQiVRUhJIybudXaZn52a7vbEBpmkyNb/A69YM9W8tDEJOTI2hpI\u002BSkvOZH2f13sNAB\u002B07sV9wHIdH9Unquz9RvoeUPtL3UFISKkky\u002BAT7HwTi6FpsgGma3N9\u002Bg5I\u002BKaFZyU8wOpJChwHnjiuE9wKCXyC/zsQGOI7DeELjtiUPbgky6Wd/HA3KBelC4AIpNfQGl88cQ0mfI5PugRhKkM2DUk0INYwtPI/dAGAlf4rbl06T6DyBVgeCABJzYPhwcm0V8ICNvwJKpVIf37h3IxSyKVAuBMDIYQAMw1jvaxwGrYNl3Xq5o79vat3Y3Nedj4\u002B11je7/m\u002BXOuyzFtDhUgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-08-11T16:50:38.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CREDENTIALS_GUIDE.md",
+              "DocumentMoniker": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\CREDENTIALS_GUIDE.md",
+              "RelativeDocumentMoniker": "CREDENTIALS_GUIDE.md",
+              "ToolTip": "C:\\Users\\Personal\\source\\repos\\arthur_morgan_brcnx_management\\CREDENTIALS_GUIDE.md",
+              "RelativeToolTip": "CREDENTIALS_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-08-11T17:18:46.874Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

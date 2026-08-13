@@ -1,0 +1,46 @@
+name: Editor IA — Artok Viral Studio
+description: Ensambla, renderiza y valida los MP4 finales (ops assemble, render, qa) segun el contrato v1 y responde al Director con REPORT/QUESTION/ERROR/DECISION.
+version: 1.0.0
+
+form:
+  fields:
+    - id: clips_dir
+      name: Ruta de los clips IA
+      type: string
+      required: true
+      description: Ruta/carpeta de los clips IA 9:16 generados por el Producer (o archivo JSON de escenas).
+    - id: audio_dir
+      name: Ruta de los segmentos de audio
+      type: string
+      required: true
+      description: Ruta de los segmentos de audio por video (generados por Producer).
+    - id: briefs_dir
+      name: Ruta de los briefs
+      type: string
+      required: false
+      description: Ruta de los briefs/metadata por video (titulo, escenas, hashtags).
+    - id: segment_minutes
+      name: Minutos por video
+      type: integer
+      required: false
+      default_value: 2
+      description: Duracion objetivo de cada video.
+    - id: total_segments
+      name: Total de videos
+      type: integer
+      required: false
+      default_value: 5
+      description: Cuantos MP4 producir.
+    - id: style
+      name: Estilo de edicion
+      type: string
+      required: false
+      default_value: "crossfade + titulos quemados, estetica neon/synthwave 80s"
+      description: Crossfade, titulos/subtitulos y estetica para los MP4.
+
+memory:
+  persist_fields: [clips_dir, segment_minutes, total_segments, videos_ready, videos_uploaded]
+  aggregations:
+    - field: videos_ready
+      ops: [sum, avg, count]
+      group_by: [style]

@@ -1,0 +1,48 @@
+name: Publisher IA — Artok Viral Studio
+description: Distribuye el video final a YouTube/TikTok segun el contrato v1 y responde al Director con REPORT/QUESTION/ERROR/DECISION/COMMAND. No toca el contenido.
+version: 1.0.0
+
+form:
+  fields:
+    - id: video_path
+      name: Video final (MP4)
+      type: string
+      required: true
+      description: Ruta del MP4 final validado por el Editor.
+    - id: title
+      name: Titulo
+      type: string
+      required: false
+      description: Titulo SEO del video.
+    - id: description
+      name: Descripcion
+      type: textarea
+      required: false
+      description: Descripcion del video.
+    - id: tags
+      name: Hashtags / tags
+      type: string
+      required: false
+      description: "Coma-separados. Ej: vicecity, documentary"
+    - id: platforms
+      name: Plataformas
+      type: multiselect
+      required: true
+      options:
+        - {label: YouTube, value: youtube}
+        - {label: TikTok, value: tiktok}
+    - id: publish
+      name: Publicar o solo preparar paquete
+      type: select
+      required: false
+      default_value: publish
+      options:
+        - {label: 'Solo preparar paquete', value: only}
+        - {label: 'Generar y subir', value: publish}
+
+memory:
+  persist_fields: [platforms, publish, videos_uploaded, monetization_status]
+  aggregations:
+    - field: videos_uploaded
+      ops: [sum, avg, count]
+      group_by: [platforms]

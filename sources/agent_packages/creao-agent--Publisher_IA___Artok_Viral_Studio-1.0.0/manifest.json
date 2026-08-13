@@ -1,0 +1,8 @@
+{
+  "name": "Publisher IA — Artok Viral Studio",
+  "description": "Rol Publisher del contrato v1/Director de Artok Viral Studio. Recibe el video final + metadata y SOLO lo distribuye a YouTube/TikTok (no toca el contenido). Devuelve REPORT por plataforma (PUBLISHED/READY con requires_user_action). Ops: prepare_package, publish, rollback. El Scheduler lo despierta; no depende de Recurring Runs.",
+  "version": "1.0.0",
+  "createdAt": "2026-08-11T00:35:22.147Z",
+  "sourceAppId": "b54a8dc0-e807-409a-abc3-6e3bf1de609c",
+  "appKind": "agent"
+}

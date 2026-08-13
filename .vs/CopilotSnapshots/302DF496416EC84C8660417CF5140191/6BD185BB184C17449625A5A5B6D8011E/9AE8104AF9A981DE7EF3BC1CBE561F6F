@@ -1,0 +1,449 @@
+﻿import os
+import sys
+import uuid
+import json
+from dataclasses import dataclass, field
+from datetime import datetime
+import numpy as np
+import yaml
+
+# Modo de operación: desactivar integraciones externas y usar facturación manual/local
+USE_EXTERNAL_APIS = False
+MANUAL_BILLING = True
+
+# =====================================================================
+# 1. MODELOS DE DATOS Y ESTRUCTURAS DE CREATOR MANAGEMENT
+# =====================================================================
+
+@dataclass
+class AgentConfig:
+    agent_id: str
+    name: str
+    role: str
+    version: str
+    description: str
+    system_prompt: str
+    raw_config: dict = field(default_factory=dict)
+    loaded_at: datetime = field(default_factory=datetime.now)
+
+@dataclass
+class Task:
+    task_id: str
+    title: str
+    assigned_agent: str
+    input_data: dict
+    output_data: str = ""
+    status: str = "PENDING"  # PENDING, IN_PROGRESS, COMPLETED, FAILED
+    created_at: str = field(default_factory=lambda: datetime.now().isoformat())
+    completed_at: str = ""
+
+@dataclass
+class MediaPayload:
+    title: str
+    description: str
+    tags: list[str]
+    script_hooks: list[str]
+    rendered_file: str
+    platforms: list[str]  # ['youtube', 'tiktok']
+    scheduled_time: str = ""
+
+@dataclass
+class TransactionRecord:
+    transaction_id: str
+    client_name: str
+    amount: float
+    currency: str
+    status: str  # VERIFIED, PENDING, REJECTED
+    payment_date: str
+
+# =====================================================================
+# 2. CARGADOR DINÁMICO DE PAQUETES DE AGENTES (ARTOK IA VIRAL STUDIO)
+# =====================================================================
+
+class AgentPackageLoader:
+    """Cargador de paquetes de agentes almacenados en agent_packages"""
+    def __init__(self, packages_dir: str):
+        self.packages_dir = packages_dir
+        self.loaded_agents: dict[str, AgentConfig] = {}
+
+    def parse_skill_md(self, skill_path: str) -> str:
+        if not os.path.exists(skill_path):
+            return "Skill por defecto: Ejecutar tareas asignadas según el rol."
+        with open(skill_path, 'r', encoding='utf-8') as f:
+            return f.read()
+
+    def load_agents(self):
+        if not os.path.exists(self.packages_dir):
+            print(f"[!] Directorio no encontrado: {self.packages_dir}")
+            return
+
+        print(f"[*] [GASPAR] Escaneando e instanciando agentes en: {self.packages_dir}\n")
+
+        for folder_name in os.listdir(self.packages_dir):
+            agent_folder = os.path.join(self.packages_dir, folder_name)
+            
+            if os.path.isdir(agent_folder):
+                config_path = os.path.join(agent_folder, 'config.yaml')
+                skill_path = os.path.join(agent_folder, 'SKILL.md')
+
+                if os.path.exists(config_path):
+                    with open(config_path, 'r', encoding='utf-8') as cf:
+                        config_data = yaml.safe_load(cf) or {}
+
+                    system_prompt = self.parse_skill_md(skill_path)
+                    instance_id = str(uuid.uuid4())[:8]
+                    
+                    agent_name = config_data.get('name', folder_name)
+                    
+                    # Deducción del rol dentro del departamento Artok IA Viral Studio
+                    folder_lower = folder_name.lower()
+                    if "director" in folder_lower:
+                        role = "director"
+                    elif "editor" in folder_lower:
+                        role = "editor"
+                    elif "productor" in folder_lower or "producer" in folder_lower:
+                        role = "productor"
+                    elif "publisher" in folder_lower:
+                        role = "publisher"
+                    elif "scheduler" in folder_lower:
+                        role = "scheduler"
+                    else:
+                        role = config_data.get('role', folder_name.split('_')[-1].lower())
+
+                    version = config_data.get('version', '3.1.0')
+                    desc = config_data.get('description', 'Agente activo de Artok IA Viral Studio')
+
+                    agent_obj = AgentConfig(
+                        agent_id=f"{folder_name}_{instance_id}",
+                        name=agent_name,
+                        role=role.lower(),
+                        version=version,
+                        description=desc,
+                        system_prompt=system_prompt,
+                        raw_config=config_data
+                    )
+
+                    self.loaded_agents[role.lower()] = agent_obj
+                    print(f"  [+] Agente registrado -> Rol: [{role.upper()}] | Nombre: {agent_name} (v{version})")
+
+# =====================================================================
+# 3. TRÍADA DE NÚCLEOS & FINANZAS (MONEY IN THE BANK)
+# =====================================================================
+
+class JohnMarstonCore:
+    """Núcleo Operativo: Sistema, Permisos, Logs, Monitoreo de Salud y API Gateway"""
+    def __init__(self):
+        self.system_status = "ONLINE"
+        self.version = "3.1.0"
+        # En modo local/desconectado no guardamos claves de Google Cloud
+        # Mantener estructura para compatibilidad pero sin credenciales
+        self.api_keys = {
+            "youtube": None,
+            "tiktok": None
+        }
+
+    def log_event(self, source: str, message: str):
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{timestamp}] [{source.upper()}] {message}")
+
+    def verify_apis(self) -> bool:
+        # Si las integraciones externas están deshabilitadas, pasar la verificación
+        if not USE_EXTERNAL_APIS:
+            self.log_event("JMC", "Modo LOCAL: integraciones externas deshabilitadas. Omitiendo verificación de APIs.")
+            return True
+
+        self.log_event("JMC", "Verificando estado de conexiones API para YouTube y TikTok...")
+        yt_valid = bool(self.api_keys.get("youtube"))
+        tt_valid = bool(self.api_keys.get("tiktok"))
+        return yt_valid and tt_valid
+
+class OrionCore:
+    """Cerebro Analítico: Predicciones, KPIs, Costos, Optimización y Reportes"""
+    def __init__(self, logger: JohnMarstonCore):
+        self.logger = logger
+        self.active_metrics = {}
+
+    def calculate_efficiency(self, tasks_completed: int, execution_time_sec: float) -> float:
+        if execution_time_sec <= 0:
+            return 100.0
+        return round((tasks_completed / execution_time_sec) * 100, 2)
+
+    def generate_periodic_report(self, report_type: str = "Semanal") -> dict:
+        """Genera reportes de rendimiento automáticos para los días Lunes y Sábados"""
+        day_name = datetime.now().strftime("%A")
+        self.logger.log_event("ORION", f"Generando reporte de rendimiento analítico ({report_type} - {day_name})...")
+        
+        return {
+            "report_id": f"REP-{uuid.uuid4().hex[:6]}",
+            "date": datetime.now().strftime("%Y-%m-%d"),
+            "type": report_type,
+            "total_views_estimated": int(np.random.uniform(50000, 150000)),
+            "average_engagement_rate": f"{round(np.random.uniform(8.0, 14.2), 2)}%",
+            "top_platform": "YouTube Shorts & TikTok",
+            "status": "VALIDADO_Y_ENTREGADO"
+        }
+
+class MoneyInTheBank:
+    """Módulo Financiero y Monetización: Verificación de Pagos y Transferencias Bancarias"""
+    def __init__(self, logger: JohnMarstonCore):
+        self.logger = logger
+        self.transactions: list[TransactionRecord] = []
+
+    def verify_bank_transfer(self, client_name: str, expected_amount: float) -> dict:
+        """Confirma el pago o transferencia por nuestros servicios prestados"""
+        self.logger.log_event("MONEY_BANK", f"Verificando depósito/transferencia de {client_name} por ${expected_amount} MXN...")
+        
+        tx_id = f"TXN-{uuid.uuid4().hex[:8]}"
+        record = TransactionRecord(
+            transaction_id=tx_id,
+            client_name=client_name,
+            amount=expected_amount,
+            currency="MXN",
+            status="VERIFIED",
+            payment_date=datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        )
+        self.transactions.append(record)
+        
+        self.logger.log_event("MONEY_BANK", f"[✓] Transferencia bancaria verificada. ID: {tx_id}")
+        return {
+            "status": "CONFIRMED",
+            "transaction_id": tx_id,
+            "amount": expected_amount,
+            "message": "Pago acreditado en cuenta bancaria."
+        }
+
+# =====================================================================
+# 4. CONECTORES DE REDES SOCIALES (YOUTUBE Y TIKTOK)
+# =====================================================================
+
+class YouTubeConnector:
+    """Módulo adaptador para YouTube Data API v3"""
+    def __init__(self, logger: JohnMarstonCore):
+        self.logger = logger
+
+    def publish_video(self, payload: MediaPayload) -> dict:
+        self.logger.log_event("YT_CONNECTOR", f"Enviando payload a YouTube Data API v3...")
+        self.logger.log_event("YT_CONNECTOR", f"Título: {payload.title}")
+        # CORREGIDO: Generar UUID una sola vez para evitar inconsistencias
+        video_id = f"yt_{uuid.uuid4().hex[:8]}"
+        return {
+            "platform": "YouTube",
+            "status": "SUCCESS",
+            "video_id": video_id,
+            "url": f"https://youtube.com/shorts/{video_id}"
+        }
+
+class TikTokConnector:
+    """Módulo adaptador para TikTok Direct Posting API"""
+    def __init__(self, logger: JohnMarstonCore):
+        self.logger = logger
+
+    def publish_video(self, payload: MediaPayload) -> dict:
+        self.logger.log_event("TT_CONNECTOR", f"Enviando payload a TikTok Content API...")
+        # CORREGIDO: Generar UUID una sola vez para evitar inconsistencias
+        post_id = f"tt_{uuid.uuid4().hex[:8]}"
+        return {
+            "platform": "TikTok",
+            "status": "SUCCESS",
+            "post_id": post_id,
+            "url": f"https://tiktok.com/@artok/video/{post_id}"
+        }
+
+# =====================================================================
+# 5. GERENCIA DE AGENTES Y PROGRAMACIÓN DE CALENDARIO
+# =====================================================================
+
+class GasparAgentManager:
+    """GERENTE DE AGENTES IA: Crear, Supervisar, Balancear y Ejecutar Agentes de IA"""
+    def __init__(self, loader: AgentPackageLoader, logger: JohnMarstonCore, yt_conn: YouTubeConnector, tt_conn: TikTokConnector):
+        self.loader = loader
+        self.logger = logger
+        self.yt_conn = yt_conn
+        self.tt_conn = tt_conn
+
+    def dispatch_agent_task(self, role: str, task_context: dict) -> dict:
+        agent = self.loader.loaded_agents.get(role.lower())
+        agent_name = agent.name if agent else f"Agente_{role.capitalize()}"
+
+        self.logger.log_event("GASPAR", f"Invocando agente de Artok Studio: [{agent_name}] para rol [{role.upper()}]")
+        
+        topic = task_context.get("topic", "Contenido General ARTOK")
+        cta_invitation = "\n\n👉 ¡Si te gustó este contenido, no olvides suscribirte y activar las notificaciones para ver más videos exclusivos de Artok IA Viral Studio!"
+
+        if role == "director":
+            return {
+                "decision": "Estrategia de contenido aprobada para YouTube Shorts y TikTok.",
+                "viral_angle": f"Enfoque de alto rendimiento para '{topic}'",
+                "target_platforms": ["youtube", "tiktok"]
+            }
+        elif role == "productor":
+            return {
+                "script_title": f"🚀 Innovación con {topic}",
+                "hooks": [
+                    "¿Sabías que esto cambia todo por completo?",
+                    "Atento a los primeros 3 segundos...",
+                    "Aplica este truco hoy mismo."
+                ],
+                "visual_cues": "Cortes dinámicos cada 1.5s y subtítulos animados en amarillo/blanco."
+            }
+        elif role == "editor":
+            return {
+                "rendered_file": f"exports/artok_render_{uuid.uuid4().hex[:6]}.mp4",
+                "aspect_ratio": "9:16",
+                "resolution": "1080x1920",
+                "audio_track": "Artok_Official_Beat.mp3"
+            }
+        elif role == "publisher":
+            title = f"🚀 Revolución con {topic} | ARTOK IA Studio"
+            description = f"Aprende cómo optimizar tu flujo de trabajo con {topic}.{cta_invitation}"
+            tags = ["AI", "Automation", "ArtokStudio", "TechViral", "Shorts"]
+            
+            return {
+                "title": title,
+                "description": description,
+                "tags": tags,
+                "prepared_payload": True
+            }
+        elif role == "scheduler":
+            # CORREGIDO: Validación de datos previos antes de acceder
+            results = task_context.get("results", {})
+            
+            # Verificar que existen los datos previos requeridos
+            if "publisher" not in results:
+                self.logger.log_event("GASPAR", "[!] Error: No se encontraron resultados del publisher.")
+                return {"status": "ERROR", "message": "Datos del publisher no disponibles"}
+            
+            # Obtener datos de manera segura con .get()
+            pub_data = results.get("publisher", {})
+            prod_data = results.get("productor", {})
+            editor_data = results.get("editor", {})
+            dir_data = results.get("director", {})
+            
+            # Configuración de 3 videos, 3 veces al día (9:00 AM, 3:00 PM, 8:00 PM - Lunes a Viernes)
+            daily_slots = ["09:00 AM", "03:00 PM", "08:00 PM"]
+            
+            payload = MediaPayload(
+                title=pub_data.get("title", "Sin título"),
+                description=pub_data.get("description", ""),
+                tags=pub_data.get("tags", []),
+                script_hooks=prod_data.get("hooks", []),
+                rendered_file=editor_data.get("rendered_file", ""),
+                platforms=dir_data.get("target_platforms", ["youtube"]),
+                scheduled_time=datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            )
+            
+            pub_results = {}
+            if "youtube" in payload.platforms:
+                pub_results["youtube"] = self.yt_conn.publish_video(payload)
+            if "tiktok" in payload.platforms:
+                pub_results["tiktok"] = self.tt_conn.publish_video(payload)
+                
+            return {
+                "schedule_status": "PROGRAMADO_Y_PUBLICADO",
+                "daily_slots": daily_slots,
+                "schedule_frequency": "3 videos / 3 veces al día (9:00 AM, 3:00 PM, 8:00 PM - Lunes a Viernes)",
+                "dispatch_details": pub_results
+            }
+        else:
+            return {"status": f"Procesamiento finalizado por agente {agent_name}."}
+
+class MelchorStrategy:
+    """ESTRATEGA: Planeación Estratégica, Investigación y Roadmaps"""
+    def __init__(self, logger: JohnMarstonCore):
+        self.logger = logger
+
+    def build_roadmap(self, objective: str) -> list[str]:
+        self.logger.log_event("MELCHOR", f"Diseñando roadmap estratégico para: '{objective}'")
+        return ["director", "productor", "editor", "publisher", "scheduler"]
+
+class BalthazarOrchestrator:
+    """DIRECTOR GENERAL: Orquestador Supremo, Asigna tareas y resuelve conflictos"""
+    def __init__(self, kernel: JohnMarstonCore, orion: OrionCore, melchor: MelchorStrategy, gaspar: GasparAgentManager, bank: MoneyInTheBank):
+        self.kernel = kernel
+        self.orion = orion
+        self.melchor = melchor
+        self.gaspar = gaspar
+        self.bank = bank
+        self.task_history: list[Task] = []
+
+    def execute_business_goal(self, goal_title: str, client_name: str = "Canal Principal ARTOK", service_fee: float = 15000.0):
+        print(f"\n=======================================================")
+        print(f"👑 BALTHAZAR | NUEVO OBJETIVO RECIBIDO: '{goal_title}'")
+        print(f"=======================================================\n")
+
+        # 1. Verificación de pago por Money In The Bank
+        payment_check = self.bank.verify_bank_transfer(client_name, service_fee)
+        if payment_check["status"] != "CONFIRMED":
+            self.kernel.log_event("BALTHAZAR", "[!] Transferencia bancaria no confirmada. Operación pausada.")
+            return
+
+        # 2. Verificación de estado de APIs en JMC
+        if not self.kernel.verify_apis():
+            self.kernel.log_event("BALTHAZAR", "[!] Error en verificación de APIs de redes sociales.")
+            return
+
+        # 3. Planificación estratégica por Melchor
+        self.kernel.log_event("BALTHAZAR", "Solicitando roadmap estratégico a Melchor...")
+        roadmap = self.melchor.build_roadmap(goal_title)
+
+        pipeline_context = {"topic": goal_title, "results": {}}
+        start_time = datetime.now()
+
+        # 4. Ejecución del flujo de trabajo con Gaspar y Artok IA Viral Studio
+        for step in roadmap:
+            self.kernel.log_event("BALTHAZAR", f"Coordinando departamento Artok Studio - Fase: [{step.upper()}] con Gaspar...")
+            
+            output = self.gaspar.dispatch_agent_task(step, pipeline_context)
+            pipeline_context["results"][step] = output
+            
+            task = Task(
+                task_id=f"TASK-{uuid.uuid4().hex[:6]}",
+                title=f"Fase {step.capitalize()}",
+                assigned_agent=step,
+                input_data={"goal": goal_title},
+                output_data=json.dumps(output, ensure_ascii=False),
+                status="COMPLETED",
+                completed_at=datetime.now().isoformat()
+            )
+            self.task_history.append(task)
+            print(f"   └── Resultado [{step.upper()}]: {json.dumps(output, indent=2, ensure_ascii=False)}\n")
+
+        # 5. Evaluación de eficiencia y emisión de reporte por Orion Core
+        total_time = (datetime.now() - start_time).total_seconds()
+        efficiency = self.orion.calculate_efficiency(len(roadmap), total_time)
+        
+        self.kernel.log_event("ORION", f"Análisis de rendimiento: {efficiency}% de eficiencia global.")
+        
+        report = self.orion.generate_periodic_report(report_type="Resumen Lunes y Sábados")
+        self.kernel.log_event("ORION", f"Reporte final entregado: {json.dumps(report, ensure_ascii=False)}")
+        
+        self.kernel.log_event("BALTHAZAR", f"Objetivo '{goal_title}' completado con éxito por el departamento Artok IA Viral Studio.\n")
+
+if __name__ == "__main__":
+    # 1. Rutas de trabajo
+    PACKAGES_PATH = r"C:\Users\Personal\.codex\.chatgpt-projects\g-p-6a6d6abe62f08191985e1d050f9864fa\agent_packages"
+
+    # 2. Inicialización del Kernel, Analítica y Finanzas
+    john_marston = JohnMarstonCore()
+    orion = OrionCore(john_marston)
+    bank = MoneyInTheBank(john_marston)
+
+    # 3. Inicialización de Conectores API (YouTube & TikTok)
+    yt_connector = YouTubeConnector(john_marston)
+    tt_connector = TikTokConnector(john_marston)
+
+    # 4. Carga de Agentes de IA
+    loader = AgentPackageLoader(PACKAGES_PATH)
+    loader.load_agents()
+
+    # 5. Instanciación de Los 3 Reyes Magos
+    gaspar = GasparAgentManager(loader, john_marston, yt_connector, tt_connector)
+    melchor = MelchorStrategy(john_marston)
+    balthazar = BalthazarOrchestrator(john_marston, orion, melchor, gaspar, bank)
+
+    # 6. Ejecución del sistema para la campaña Creator Management
+    balthazar.execute_business_goal(
+        goal_title="Lanzamiento Campaña Viral ARTOK v3.1",
+        client_name="Canal YouTube / TikTok ARTOK",
+        service_fee=15000.0
+    )

@@ -1,0 +1,29 @@
+name: Scheduler IA — Artok Viral Studio
+description: Despierta el pipeline a horas programadas disparando el inicio de un job hacia el Director. Sin IA.
+version: 1.0.0
+
+form:
+  fields:
+    - id: schedule_times
+      name: Horas de disparo
+      type: string
+      required: false
+      default_value: "08:00, 20:00"
+      description: Horas locales (HH:MM) en que se dispara un job. Coma-separadas.
+    - id: audio_url
+      name: Audio / Mix (URL o archivo)
+      type: string
+      required: false
+      description: URL del audio a procesar en cada disparo (si se fija, se repite el mismo).
+    - id: job_params
+      name: Parametros del job
+      type: textarea
+      required: false
+      description: JSON con parametros para el Director (segment_minutes, scenes_per_segment, total_segments, story_theme, platforms, publish, base_title).
+
+memory:
+  persist_fields: [schedule_times, audio_url, jobs_started]
+  aggregations:
+    - field: jobs_started
+      ops: [sum, count]
+      group_by: [schedule_times]

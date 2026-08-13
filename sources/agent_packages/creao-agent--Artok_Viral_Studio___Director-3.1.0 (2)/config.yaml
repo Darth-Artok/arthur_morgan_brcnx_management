@@ -1,0 +1,80 @@
+name: Artok Viral Studio — Director
+description: Orquestador del pipeline viral via Queue + Scheduler, con protocolo de 6 tipos (TASK/REPORT/QUESTION/ERROR/DECISION/COMMAND).
+version: 3.1.0
+
+form:
+  fields:
+    - id: audio_url
+      name: Audio / Mix (URL o archivo)
+      type: string
+      required: true
+      description: URL publica del audio largo (40-60 min) o ruta del archivo subido.
+    - id: protagonist_image
+      name: Foto del protagonista
+      type: file
+      required: false
+      description: Foto del protagonista para referencia visual (si no, usa protagonista.webp del bundle).
+    - id: cover_image
+      name: Portada / arte
+      type: file
+      required: false
+      description: Portada del canal (si no, usa cover.png / cover_dark.png del bundle).
+    - id: segment_minutes
+      name: Minutos por clip
+      type: integer
+      required: false
+      default_value: 2
+    - id: scenes_per_segment
+      name: Escenas por segmento
+      type: integer
+      required: false
+      default_value: 3
+      description: Cuantas escenas separar por clip.
+    - id: total_segments
+      name: Total de videos
+      type: integer
+      required: false
+      default_value: 5
+      description: Cuantos videos de 2 min producir en esta corrida.
+    - id: story_theme
+      name: Tema narrativo
+      type: string
+      required: false
+      default_value: "Vida callejera en Vice City, historia lineal con un protagonista, estetica GTA (neon, synthwave, Miami 80s)."
+    - id: platforms
+      name: Plataformas
+      type: multiselect
+      required: false
+      options:
+        - {label: YouTube, value: youtube}
+        - {label: TikTok, value: tiktok}
+    - id: publish
+      name: Publicar o solo generar
+      type: select
+      required: false
+      options:
+        - {label: 'Solo generar', value: only}
+        - {label: 'Generar y subir', value: publish}
+    - id: base_title
+      name: Titulo base
+      type: string
+      required: false
+      description: Titulo base SEO para los videos.
+    - id: run_mode
+      name: Modo de corrida
+      type: select
+      required: false
+      default_value: execute
+      options:
+        - {label: 'Orquestar y ejecutar', value: execute}
+        - {label: 'Solo plan (plan y briefs)', value: plan_only}
+
+memory:
+  persist_fields: [audio_url, segment_minutes, scenes_per_segment, total_segments, story_theme, platforms, videos_ready, videos_uploaded, scenes_analyzed, monetization_status]
+  aggregations:
+    - field: videos_ready
+      ops: [sum, avg, count]
+      group_by: [story_theme]
+    - field: videos_uploaded
+      ops: [sum, avg, count]
+      group_by: [platforms]

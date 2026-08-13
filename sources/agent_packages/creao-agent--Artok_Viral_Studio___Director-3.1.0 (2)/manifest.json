@@ -1,0 +1,8 @@
+{
+  "name": "Artok Viral Studio — Director",
+  "description": "Director Agent (protocolo v1, 6 tipos): orquesta via Queue + Scheduler. La Queue es la bandeja de jobs (READY/PROCESSING/WAITING/FAILED/COMPLETED) que permite trabajo asincrono Director->Producer->Editor->Publisher. Protocolo estructurado: TASK/REPORT/QUESTION/ERROR/DECISION/COMMAND. Sin texto libre.",
+  "version": "3.1.0",
+  "createdAt": "2026-08-11T00:37:06.164Z",
+  "sourceAppId": "a5f2b7c5-c7cc-4016-b5f6-24ed8737926a",
+  "appKind": "agent"
+}

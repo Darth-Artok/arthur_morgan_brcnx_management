@@ -1,0 +1,8 @@
+{
+  "name": "Producer IA — Artok Viral Studio",
+  "description": "Rol Producer del contrato v1/Director de Artok Viral Studio. Ejecuta las ops segment, transcribe_analyze, generate_clips y build_brief para convertir un audio largo en segmentos, escenas, clips IA y briefs, respondiendo al Director con REPORT/QUESTION/ERROR/DECISION.",
+  "version": "1.0.0",
+  "createdAt": "2026-08-10T23:50:04.402Z",
+  "sourceAppId": "22dcae65-78e9-447c-a581-21819162e879",
+  "appKind": "agent"
+}

@@ -1,0 +1,90 @@
+{
+  "root": "loop",
+  "elements": {
+    "head": {
+      "type": "Card",
+      "props": {
+        "title": "",
+        "description": null
+      },
+      "children": [
+        "head-txt"
+      ]
+    },
+    "loop": {
+      "type": "Card",
+      "props": {
+        "title": "",
+        "description": null
+      },
+      "children": [
+        "loop-txt"
+      ]
+    },
+    "tasks": {
+      "type": "Card",
+      "props": {
+        "title": "",
+        "description": null
+      },
+      "children": [
+        "tasks-tbl"
+      ]
+    },
+    "ex-txt": {
+      "type": "Text",
+      "props": {
+        "text": "",
+        "variant": "code"
+      }
+    },
+    "example": {
+      "type": "Card",
+      "props": {
+        "title": "",
+        "description": null
+      },
+      "children": [
+        "ex-txt"
+      ]
+    },
+    "head-txt": {
+      "type": "Text",
+      "props": {
+        "text": "",
+        "variant": "body"
+      }
+    },
+    "loop-txt": {
+      "type": "Text",
+      "props": {
+        "text": "",
+        "variant": "code"
+      }
+    },
+    "resp-tbl": {
+      "type": "Table",
+      "props": {
+        "rows": [],
+        "columns": []
+      }
+    },
+    "responses": {
+      "type": "Card",
+      "props": {
+        "title": "",
+        "description": null
+      },
+      "children": [
+        "resp-tbl"
+      ]
+    },
+    "tasks-tbl": {
+      "type": "Table",
+      "props": {
+        "rows": [],
+        "columns": []
+      }
+    }
+  }
+}

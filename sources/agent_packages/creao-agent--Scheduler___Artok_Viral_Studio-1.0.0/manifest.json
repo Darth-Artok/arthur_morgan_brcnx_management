@@ -1,0 +1,8 @@
+{
+  "name": "Scheduler — Artok Viral Studio",
+  "description": "Componente de tiempo (sin IA) que despierta el sistema: a horas programadas dispara el inicio de un job hacia el Director (POST /jobs). Reemplaza la dependencia de Recurring Runs; el reloj queda fuera (proceso externo/cron). No genera contenido ni decide; solo arranca el pipeline.",
+  "version": "1.0.0",
+  "createdAt": "2026-08-11T00:36:10.766Z",
+  "sourceAppId": "9d7cfb95-250f-4833-99f9-9d0108646542",
+  "appKind": "agent"
+}

@@ -1,0 +1,63 @@
+name: Producer IA — Artok Viral Studio
+description: Ejecuta las ops de produccion (segment, transcribe_analyze, generate_clips, build_brief) segun el contrato v1 y responde al Director con REPORT/QUESTION/ERROR/DECISION.
+version: 1.0.0
+
+form:
+  fields:
+    - id: audio_url
+      name: Audio / Mix (URL o archivo)
+      type: string
+      required: true
+      description: URL publica del audio largo o ruta del archivo subido.
+    - id: story_theme
+      name: Tema narrativo
+      type: string
+      required: false
+      default_value: "Vida callejera en Vice City, historia lineal con un protagonista, estetica GTA (neon, synthwave, Miami 80s)."
+      description: Tema y estilo para las escenas y clips.
+    - id: segment_minutes
+      name: Minutos por segmento
+      type: integer
+      required: false
+      default_value: 2
+      description: Duracion objetivo de cada video/clip.
+    - id: scenes_per_segment
+      name: Escenas por segmento
+      type: integer
+      required: false
+      default_value: 3
+      description: Escenas a separar por segmento (Escena 1, 2, 3...).
+    - id: total_segments
+      name: Total de segmentos
+      type: integer
+      required: false
+      default_value: 5
+      description: Cuantos segmentos/videos producir.
+    - id: base_title
+      name: Titulo base
+      type: string
+      required: false
+      description: Titulo base para los briefs.
+    - id: protagonist_image
+      name: Foto del protagonista
+      type: file
+      required: false
+      description: Foto del protagonista (si no, usa protagonista.webp del bundle).
+    - id: cover_image
+      name: Portada / arte
+      type: file
+      required: false
+      description: Portada para referencia visual (si no, cover.png del bundle).
+
+memory:
+  persist_fields: [audio_url, story_theme, segment_minutes, scenes_per_segment, total_segments, segments_created, scenes_analyzed, clips_generated, briefs_generated]
+  aggregations:
+    - field: segments_created
+      ops: [sum, avg, count]
+      group_by: [story_theme]
+    - field: scenes_analyzed
+      ops: [sum, avg, count]
+      group_by: [story_theme]
+    - field: clips_generated
+      ops: [sum, avg, count]
+      group_by: [story_theme]
